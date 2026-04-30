@@ -740,15 +740,17 @@
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 960px) {
-            .main { flex-direction: column; }
+            .main { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
             .controls-panel {
                 width: 100%;
                 min-width: unset;
                 border-left: none;
                 border-top: 1px solid var(--border);
                 max-height: none;
+                flex: none;
+                overflow-y: visible;
             }
-            .preview-panel { padding: 24px 16px; }
+            .preview-panel { padding: 24px 16px; flex: none; min-height: unset; overflow: visible; }
             .canvas-wrapper { max-width: 400px; }
             .controls-scroll { padding: 20px 16px; }
             
@@ -843,7 +845,7 @@
         .carousel-nav button:hover { background: var(--accent); border-color: var(--accent); }
         .carousel-nav button:disabled { opacity: 0.25; cursor: not-allowed; }
         .carousel-slide-indicator { font-size: 13px; font-weight: 600; color: var(--text-secondary); min-width: 60px; text-align: center; }
-        .carousel-controls { width: 290px; min-width: 290px; border-left: 1px solid var(--border); background: var(--surface); overflow-y: auto; }
+        .carousel-controls { width: 380px; min-width: 380px; border-left: 1px solid var(--border); background: var(--surface); overflow-y: auto; }
         .carousel-controls-scroll { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
         .cc-section { background: var(--surface-light); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
         .cc-section h3 { font-size: 10px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 12px; }
