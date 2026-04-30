@@ -901,9 +901,13 @@
     <div class="toast" id="toast"></div>
 
     <!-- ===== POST MODE ===== -->
-    <div id="postApp" style="display:none;">
+    <div id="postApp" style="display:none; flex-direction: column; min-height: 100vh;">
 
-    <!-- Header removed per user request -->
+    <div class="carousel-topbar">
+        <button class="back-btn" id="postBackBtn">← Retour</button>
+        <h2>🖼️ Éditeur de Post</h2>
+        <div style="width: 100px;"></div> <!-- Placeholder for alignment -->
+    </div>
 
     <!-- Main content -->
     <main class="main">
@@ -1153,7 +1157,7 @@ veranda?</textarea>
 
     document.getElementById('modePost').addEventListener('click', () => {
         modeSelect.classList.add('hidden');
-        postApp.style.display = '';
+        postApp.style.display = 'flex';
         setTimeout(() => init(), 50);
     });
 
@@ -1165,6 +1169,11 @@ veranda?</textarea>
 
     document.getElementById('carouselBackBtn').addEventListener('click', () => {
         carouselApp.classList.remove('active');
+        postApp.style.display = 'none';
+        modeSelect.classList.remove('hidden');
+    });
+
+    document.getElementById('postBackBtn').addEventListener('click', () => {
         postApp.style.display = 'none';
         modeSelect.classList.remove('hidden');
     });
