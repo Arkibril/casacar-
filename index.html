@@ -738,45 +738,6 @@
         .toast.success { border-color: rgba(140,198,63,0.3); }
         .toast.error { border-color: rgba(231,76,60,0.3); }
 
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 960px) {
-            .main { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
-            .controls-panel {
-                width: 100%;
-                min-width: unset;
-                border-left: none;
-                border-top: 1px solid var(--border);
-                max-height: none;
-                flex: none;
-                overflow-y: visible;
-            }
-            .preview-panel { padding: 24px 16px; flex: none; min-height: unset; overflow: visible; }
-            .canvas-wrapper { max-width: 400px; }
-            .controls-scroll { padding: 20px 16px; }
-            
-            .mode-cards { flex-direction: column; }
-            
-            .carousel-workspace { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
-            .slides-panel { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); height: auto; flex: none; }
-            #slidesList { display: flex; overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
-            .slide-thumb-item { border-bottom: none; border-right: 1px solid var(--border); flex-shrink: 0; min-width: 160px; }
-            .slide-thumb-item.active { border-left: none; border-bottom: 3px solid var(--accent); background: var(--surface-hover); }
-            
-            .carousel-preview { padding: 24px 16px; flex: none; overflow: visible; }
-            .carousel-controls { width: 100%; min-width: unset; border-left: none; border-top: 1px solid var(--border); overflow-y: visible; flex: none; }
-            
-            .carousel-topbar { flex-direction: column; gap: 14px; align-items: stretch; padding: 16px; }
-            .carousel-topbar h2 { text-align: center; }
-            .export-carousel-btn { width: 100%; justify-content: center; }
-            .back-btn { width: max-content; }
-        }
-
-        @media (max-width: 480px) {
-            .header { padding: 12px 16px; }
-            .header-badge { display: none; }
-            .preview-panel { padding: 16px 12px; }
-            .mode-select-inner { padding: 24px 16px; gap: 32px; }
-        }
 
         /* ===== MODE SELECT ===== */
         .mode-select {
@@ -867,6 +828,46 @@
         .cc-slider-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
         .cc-slider-label { font-size: 11px; color: var(--text-secondary); width: 60px; flex-shrink: 0; }
         .cc-slider-val { font-size: 11px; color: var(--accent); font-weight: 700; width: 28px; text-align: right; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 960px) {
+            .main { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
+            .controls-panel {
+                width: 100%;
+                min-width: 0;
+                border-left: none;
+                border-top: 1px solid var(--border);
+                max-height: none;
+                flex: none;
+                overflow-y: visible;
+            }
+            .preview-panel { padding: 24px 16px; flex: none; min-height: unset; overflow: visible; }
+            .canvas-wrapper { max-width: 400px; }
+            .controls-scroll { padding: 20px 16px; }
+            
+            .mode-cards { flex-direction: column; }
+            
+            .carousel-workspace { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
+            .slides-panel { width: 100%; min-width: 0; border-right: none; border-bottom: 1px solid var(--border); height: auto; flex: none; }
+            #slidesList { display: flex; overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
+            .slide-thumb-item { border-bottom: none; border-right: 1px solid var(--border); flex-shrink: 0; min-width: 160px; }
+            .slide-thumb-item.active { border-left: none; border-bottom: 3px solid var(--accent); background: var(--surface-hover); }
+            
+            .carousel-preview { padding: 24px 16px; flex: none; overflow: visible; }
+            .carousel-controls { width: 100%; min-width: 0; border-left: none; border-top: 1px solid var(--border); overflow-y: visible; flex: none; }
+            
+            .carousel-topbar { flex-direction: column; gap: 14px; align-items: stretch; padding: 16px; }
+            .carousel-topbar h2 { text-align: center; }
+            .export-carousel-btn { width: 100%; justify-content: center; }
+            .back-btn { width: max-content; }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 12px 16px; }
+            .header-badge { display: none; }
+            .preview-panel { padding: 16px 12px; }
+            .mode-select-inner { padding: 24px 16px; gap: 32px; }
+        }
     </style>
 </head>
 <body>
